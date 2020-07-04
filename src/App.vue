@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png">
-    <HelloWorld msg="Hello Vue in x CodeSandbox!"/>
+    <div class="toolbar-spacer"></div>
+    <nav>
+      <router-link to="/home">Home</router-link>
+      <router-link to="/privacy">Privacy</router-link>
+      <router-link to="/mainitems">MainItems</router-link>
+      <router-link to="/subitems">SubItems</router-link>
+    </nav>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld
-  }
+  components: {}
 };
 </script>
 
@@ -24,5 +27,26 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited,
+a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
 }
 </style>
