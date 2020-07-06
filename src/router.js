@@ -26,7 +26,7 @@ export default [
   {
     path: "/mainitems",
     component: MainContainer,
-    name: "Mainitems",
+    //name: "Mainitems",
 
     children: [
       {
@@ -41,17 +41,20 @@ export default [
       {
         // /mainitems/create
         path: "create",
-        component: MainCreate
+        component: MainCreate,
+        name: "maincreate"
       },
       {
-        // /mainitems/create
-        path: "edit",
-        component: MainEdit
+        path: "edit/:id",
+        component: MainEdit,
+        name: "mainedit",
+        props: true
       },
       {
-        // /mainitems/create
-        path: "delete",
-        component: MainDelete
+        path: "delete/:id",
+        component: MainDelete,
+        name: "maindelete",
+        props: true
       },
       {
         // /mainitems/details/123
@@ -65,7 +68,7 @@ export default [
   {
     path: "/subitems",
     component: SubContainer,
-    name: "Subitems",
+    //name: "Subitems",
 
     children: [
       {
