@@ -49,4 +49,14 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --blue-color: #3f51b5;
+  --red-color: #b52f2f;
+  --pink-color: #b53f98;
+  --yellow-color: #f3e62d;
+  --grey-color: #b3b3b3;
+}
 </style>
