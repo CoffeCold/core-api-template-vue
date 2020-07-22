@@ -34,7 +34,7 @@ export default [
         component: MainList
       },
       {
-        // /mainitems/create
+        // /mainitems
         path: "list",
         component: MainList
       },
@@ -76,24 +76,30 @@ export default [
         component: SubList
       },
       {
-        // /mainitems/create
+        // /subitems
         path: "list",
         component: SubList
       },
-      {
-        // /mainitems/create
-        path: "create",
-        component: SubCreate
-      },
+
       {
         path: "edit/:id",
         component: SubEdit,
         name: "subedit",
         props: true
       },
+
       {
-        path: "delete",
-        component: SubDelete
+        // /subitems/create
+        path: "create/:mainid",
+        component: SubCreate,
+        name: "subcreate",
+        props: true
+      },
+      {
+        path: "delete/:id",
+        component: SubDelete,
+        name: "subdelete",
+        props: true
       },
       {
         // /subitems/details/aa
